@@ -1,0 +1,31 @@
+﻿@page "/auth/login"
+@layout AuthLayout
+
+
+<div class="row">
+    <div class="col-12">
+        <h2>Login to your account</h2>
+        <EditForm Model="model" OnValidSubmit="LoginUser">
+            <RadzenCard>
+                <AlertMessage Message="@message" MessageType="@messageType"></AlertMessage>
+                
+                <DataAnnotationsValidator />
+                <ValidationSummary />                
+
+                <label>Email</label>
+                <RadzenTextBox @bind-Value="model.Email"></RadzenTextBox>
+
+                <label>Password</label>
+                <RadzenPassword @bind-Value="model.Password"></RadzenPassword>
+                
+                <hr />
+                <RadzenButton ButtonType="Radzen.ButtonType.Submit" ButtonStyle="Radzen.ButtonStyle.Primary" class="btn-block mr-2" Disabled="isBusy">Login</RadzenButton>                
+            </RadzenCard>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+
+    
+}

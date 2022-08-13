@@ -1,0 +1,13 @@
+﻿@page "/"
+
+@attribute [Authorize]
+
+<h1>Authorization succesfull!</h1>
+
+Welcome to your new app.
+<br /><br />
+Page 1 - for all authorized users
+<br />
+Page 2 - only for admin-roled users
+
+<SurveyPrompt Title="How is Blazor working for you?" />
